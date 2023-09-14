@@ -1,6 +1,10 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+
 
 const Navbar = () => {
+  const amount = useSelector(state => state.amount)
+  console.log()
   return (
     <div><nav className="navbar navbar-expand-lg navbar-dark bg-dark">
     <div className="container-fluid">
@@ -14,7 +18,7 @@ const Navbar = () => {
             <a className="nav-link" href="/about">About</a>
           </li>
         </ul>
-        <button className='btn btn-primary'>Balance 1000</button>
+        <button className='btn btn-success'>Balance {amount}</button>
       </div>
     </div>
   </nav>
